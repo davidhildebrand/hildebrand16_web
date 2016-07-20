@@ -32,6 +32,7 @@ The colored dots visible in the "View data with reconstructions" option are posi
 | View data        | View data and reconstructions |
 |:----------------:|:-----------------------------:|
 | ![alt text][Vd]  | ![alt text][Vdar]             |
+
 [Vd]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_data.png "View data"
 [Vdar]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_data_and_reconstructions.png "View data and reconstructions"
 
