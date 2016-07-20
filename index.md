@@ -33,8 +33,8 @@ The colored dots visible in the "View data with reconstructions" option are posi
 |:----------------:|:-----------------------------:|
 | ![alt text][Vd]  | ![alt text][Vdar]             |
 
-[Vd]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_data.png "View data"
-[Vdar]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_data_and_reconstructions.png "View data and reconstructions"
+[Vd]: http://docs.neurodata.io/hildebrand16/images/guide/View_data.png "View data"
+[Vdar]: http://docs.neurodata.io/hildebrand16/images/guide/View_data_and_reconstructions.png "View data and reconstructions"
 
 
 ####**Navigating**
@@ -69,8 +69,8 @@ The approximate resolution associated with each zoom level is:
 
 <sup>†</sup>Artificially upsampled. The actual resolution of raw data is 18.8 nm/px within most brain regions and 56.4 nm/px outside the brain.
 
-[Tbl]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_location.png "Toolbar location"
-[Tbz]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_zoom.png "Toolbar zoom"
+[Tbl]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_location.png "Toolbar location"
+[Tbz]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_zoom.png "Toolbar zoom"
 
 
 #####**Panning**
@@ -82,7 +82,7 @@ To pan around the current transverse section, click the *pan tool button* on the
 Holding down your *left mouse button* while dragging will pan your view.
 Alternatively, if you have a *middle mouse button*, hold it down when any tool is selected and drag to pan your view.
 
-[Tbp]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_pan.png "Toolbar pan"
+[Tbp]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_pan.png "Toolbar pan"
 
 
 #####**Viewing reconstructions**
@@ -103,9 +103,9 @@ Any given node (and, thus, neuron) can be selected by hovering over it with the 
 |:------------------:|:---------------------:|
 | ![alt text][Nns]  | ![alt text][Ns]        |
 
-[Tbt]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_tracing.png "Toolbar tracing"
-[Nns]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Node_noneselected.png "Nodes, none selected"
-[Ns]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Node_selected.png "Node selected"
+[Tbt]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_tracing.png "Toolbar tracing"
+[Nns]: http://docs.neurodata.io/hildebrand16/images/guide/Node_noneselected.png "Nodes, none selected"
+[Ns]: http://docs.neurodata.io/hildebrand16/images/guide/Node_selected.png "Node selected"
 
 
 #####**Viewing tags (meta-information)**
@@ -121,11 +121,11 @@ Tags are useful for indicating specific features such as the location of a soma 
 | ![alt text][Tswo]  | ![alt text][Tsw]      |
 | ![alt text][Tmwo]  | ![alt text][Tmw]      |
 
-[Tbtg]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_tags.png "Toolbar tags"
-[Tmwo]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Tag_myelinated_without.png "Myelination event without tag"
-[Tmw]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Tag_myelinated_with.png "Myelination event with tag"
-[Tswo]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Tag_soma_without.png "Soma without tag"
-[Tsw]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Tag_soma_with.png "Soma with tag"
+[Tbtg]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_tags.png "Toolbar tags"
+[Tmwo]: http://docs.neurodata.io/hildebrand16/images/guide/Tag_myelinated_without.png "Myelination event without tag"
+[Tmw]: http://docs.neurodata.io/hildebrand16/images/guide/Tag_myelinated_with.png "Myelination event with tag"
+[Tswo]: http://docs.neurodata.io/hildebrand16/images/guide/Tag_soma_without.png "Soma without tag"
+[Tsw]: http://docs.neurodata.io/hildebrand16/images/guide/Tag_soma_with.png "Soma with tag"
 
 #####**Finding reconstructed neurons**
 
@@ -142,8 +142,8 @@ If the search result type is 'annotation', clicking on it will list neurons with
 If the search result type is 'neuron', clicking on it will select the neuron as active and color its nodes in the main panel.
 Additionally, checkboxes in the table can select results for performing other functions, such as adding annotations or adding the reconstructions to a three-dimensional (3D) view.
 
-[Tbns]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_neuronsearch.png "Neuron/annotation search"
-[NAs]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Neuron_search.png "Neuron/annotation search"
+[Tbns]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_neuronsearch.png "Neuron/annotation search"
+[NAs]: http://docs.neurodata.io/hildebrand16/images/guide/Neuron_search.png "Neuron/annotation search"
 
 Additional searchable annotations currently include:
 
@@ -210,14 +210,14 @@ With this setting, the 3D viewer will update a green sphere to the location of t
 
 ![alt text][V3Dani]
 
-[Tb3D]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Toolbar_3Dview.png "Toolbar 3D view"
-[V3Dp]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_3D.png "3D view pane"
-[STa]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Selection_append.png "Selection append"
-[V3Dm]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_3D_mauthner.png "3D view pane with Mauthner neurons"
-[STc]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Selection_colorize.png "Selection colorize"
-[STsc]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Selection_searchcolor.png "Selection search and color"
-[V3Dans]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_3D_activenodeset.png "3D view pane active node setting"
-[V3Dani]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/View_3D_activenodeinteractive.png "3D view pane active node interactivity"
+[Tb3D]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_3Dview.png "Toolbar 3D view"
+[V3Dp]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D.png "3D view pane"
+[STa]: http://docs.neurodata.io/hildebrand16/images/guide/Selection_append.png "Selection append"
+[V3Dm]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_mauthner.png "3D view pane with Mauthner neurons"
+[STc]: http://docs.neurodata.io/hildebrand16/images/guide/Selection_colorize.png "Selection colorize"
+[STsc]: http://docs.neurodata.io/hildebrand16/images/guide/Selection_searchcolor.png "Selection search and color"
+[V3Dans]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_activenodeset.png "3D view pane active node setting"
+[V3Dani]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_activenodeinteractive.png "3D view pane active node interactivity"
 
 #####**Different resolutions**
 
@@ -237,8 +237,8 @@ Layer controls allow you to remove a particular image stack or resolution from v
 
 ![alt text][LC]
 
-[LCb]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Layer_controls_button.png "Layer controls button"
-[LC]: https://github.com/davidhildebrand/hildebrand16/raw/master/images/Layer_controls.png "Layer controls"
+[LCb]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_button.png "Layer controls button"
+[LC]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls.png "Layer controls"
 
 
 ----------
