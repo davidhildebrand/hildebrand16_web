@@ -6,7 +6,7 @@ layout: default
 Hildebrand16 Guide
 ===================
 
-###**Introduction**
+### **Introduction**
 
 The goal of this guide is to familiarize users with the Hildebrand16 electron micrograph (EM) dataset and the tools used to serve it. The dataset is a collection of serial-section electron microscopy image volumes acquired at different resolutions that collectively encompass the anterior quarter of one 5.5 days post-fertilization larval zebrafish.
 
@@ -14,17 +14,17 @@ We generated this dataset to study the anatomy of the larval zebrafish brain--wh
 
 ----------
 
-###**Software**
+### **Software**
 
 All electron micrographs and reconstructions are hosted using the [Collaborative Annotation Toolkit for Massive Amounts of Image Data (CATMAID)](http://catmaid.org/). CATMAID is designed to aid in the annotation and sharing of image datasets. This guide serves as an initial reference to help users navigate the CATMAID instance we use to host the dataset. For a more thorough understanding of the software and its functionality, please visit the [CATMAID documentation page](http://catmaid.readthedocs.org/).
 Note that using the Google Chrome browser for interacting with CATMAID is highly recommended.
 
 ----------
 
-###**Getting started**
+### **Getting started**
 
 
-####**Accessing**
+#### **Accessing**
 
 Clicking on either the “[View data](http://hildebrand16.neurodata.io/catmaid/?pid=3&zp=537540&yp=351910&xp=303051&tool=navigator&sid0=2&s0=4)” or the "[View data with reconstructions](http://hildebrand16.neurodata.io/catmaid/?pid=3&zp=537540&yp=351910.65&xp=303051.44999999995&tool=tracingtool&sid0=2&s0=4)" link on the main page will immediately transport you into CATMAID.
 The colored dots visible in the "View data with reconstructions" option are positions where a reconstructed object such as a myelinated neuron intersects with the current transverse section.
@@ -37,12 +37,12 @@ The colored dots visible in the "View data with reconstructions" option are posi
 [Vdar]: http://docs.neurodata.io/hildebrand16/images/guide/View_data_and_reconstructions.png "View data and reconstructions"
 
 
-####**Navigating**
+#### **Navigating**
 
 Across the top of the page in CATMAID, you will see a toolbar. The toolbar provides useful information about the current view and contains various tools with which to interact with the data.
 
 
-#####**Orienting**
+##### **Orienting**
 
 Displayed in the toolbar are the current position, section number, and zoom level.
 The current position is defined by the center of the field of view (x, y; in nm from the top left corner) and the section number (z-index; each ~60 nm):
@@ -73,7 +73,7 @@ The approximate resolution associated with each zoom level is:
 [Tbz]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_zoom.png "Toolbar zoom"
 
 
-#####**Panning**
+##### **Panning**
 
 To pan around the current transverse section, click the *pan tool button* on the toolbar:
 
@@ -85,7 +85,7 @@ Alternatively, if you have a *middle mouse button*, hold it down when any tool i
 [Tbp]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_pan.png "Toolbar pan"
 
 
-#####**Viewing reconstructions**
+##### **Viewing reconstructions**
 
 To view existing neuron reconstructions, click the *tracing tool button* on the toolbar:
 
@@ -108,7 +108,7 @@ Any given node (and, thus, neuron) can be selected by hovering over it with the 
 [Ns]: http://docs.neurodata.io/hildebrand16/images/guide/Node_selected.png "Node selected"
 
 
-#####**Viewing tags (meta-information)**
+##### **Viewing tags (meta-information)**
 
 Tags are meta-information associated with individual nodes. To view the tags associated with individual nodes, click the *tag tool button* on the toolbar or press the *'7' key*:
 
@@ -127,7 +127,7 @@ Tags are useful for indicating specific features such as the location of a soma 
 [Tswo]: http://docs.neurodata.io/hildebrand16/images/guide/Tag_soma_without.png "Soma without tag"
 [Tsw]: http://docs.neurodata.io/hildebrand16/images/guide/Tag_soma_with.png "Soma with tag"
 
-#####**Finding reconstructed neurons**
+##### **Finding reconstructed neurons**
 
 Included in the database are several reconstructions, including all myelinated neurons that we could find. Some of these neurons are named or annotated and can be found with the CATMAID search functions.
 To search by name or annotation, click the *neuron/annotation search button* on the toolbar or press the *'/' key*:
@@ -169,7 +169,7 @@ Additional searchable annotations currently include:
 | utricle                     | Marks a utricle                                                   |
 
 
-#####**Viewing reconstructions in 3D**
+##### **Viewing reconstructions in 3D**
 
 Visualizing the morphology of a reconstructed neuron benefits from 3D renderings. CATMAID includes a 3D viewer for this purpose.
 To begin the process of rendering in 3D, click on the *3D view button*:
@@ -219,7 +219,7 @@ With this setting, the 3D viewer will update a green sphere to the location of t
 [V3Dans]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_activenodeset.png "3D view pane active node setting"
 [V3Dani]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_activenodeinteractive.png "3D view pane active node interactivity"
 
-#####**Different resolutions**
+##### **Different resolutions**
 
 The database includes overlapping image stacks acquired at different resolutions. For a g
 
@@ -243,10 +243,10 @@ Layer controls allow you to remove a particular image stack or resolution from v
 
 ----------
 
-###**Additional help**
+### **Additional help**
 
 Pressing the *'F1' key* will bring up a CATMAID help window pane that reveals commands available with any given tool. Note that some CATMAID tools will not function properly without additional access. For example, annotating additional features is not currently publicly available. However, we are happy to provide access for those who wish to create additional annotations.
 
 ----------
-Last updated on 2016-06-14 by David Hildebrand
+Last updated on 2016-07-23 by David Hildebrand
 <!--se_discussion_list:{"h41SbNlsqb3mtPdQeOIdtotf":{"selectionStart":14629,"type":"conflict","selectionEnd":14639,"discussionIndex":"h41SbNlsqb3mtPdQeOIdtotf"}}-->
