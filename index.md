@@ -221,13 +221,7 @@ With this setting, the 3D viewer will update a green sphere to the location of t
 
 ##### **Different resolutions**
 
-The database includes overlapping image stacks acquired at different resolutions. For a g
-
-
-----------
-
-
-iven section (z-index), images acquired at different resolutions are treated as layers. The higher resolution images are placed on top of--and obscuring the view of--the lower resolution images.
+The database includes overlapping image stacks acquired at different resolutions. For a given section (z-index), images acquired at different resolutions are treated as layers. The higher resolution images are placed on top of--and obscuring the view of--the lower resolution images.
 
 Click the *layer controls button* in the bottom right corner of the main pane to access options associated with each image stack layer:
 
