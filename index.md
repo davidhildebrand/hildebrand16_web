@@ -333,7 +333,7 @@ Scroll down to the stack that was just added (usually the bottom of the layer co
 
 ![alt text][LCbs]
 
-Then, select the 'color transform' option from the *filter* menu:
+Then, select the 'color transform' option from the available *filters*:
 
 ![alt text][LCfcs]
 
@@ -341,7 +341,7 @@ Add the new *filter*:
 
 ![alt text][LCfcsa]
 
-Change the settings associated with the *color transform* as desired (in this case, for a red overlay):
+Change the settings associated with the *color transform* as desired. In this case, the transform is set to produce a red overlay:
 
 ![alt text][LCfcr]
 
