@@ -134,7 +134,7 @@ To search by name or annotation, click the *neuron/annotation search button* on 
 
 ![alt text][Tbns]
 
-This action will add a new panel to your CATMAID session. In the new panel, there are fields for name or annotation searching. You can, for example, search for the Mauthner neurons by name or annotation by typing in 'mauthner':
+This action will add a new panel to your CATMAID session. In the new panel, there are fields for name or annotation searching. You can, for example, search for the Mauthner neurons by name or annotation by typing in 'Mauthner':
 
 ![alt text][NAs]
 
@@ -145,28 +145,103 @@ Additionally, checkboxes in the table can select results for performing other fu
 [Tbns]: http://docs.neurodata.io/hildebrand16/images/guide/Toolbar_neuronsearch.png "Neuron/annotation search"
 [NAs]: http://docs.neurodata.io/hildebrand16/images/guide/Neuron_search.png "Neuron/annotation search"
 
-Additional searchable annotations currently include:
+Searchable annotations currently include:
 
-| Annotation                  | Description                                                       |
-|----------------------------:|:------------------------------------------------------------------|
-| lateral_line                | An element of the lateral line (neuromast or afferent)            |
-| left                        | Soma (or majority if no soma) is on the left side                 |
-| Mauthner                    | A Mauthner neuron                                                 |
-| motor                       | Directly innervates a muscle (i.e., motor neuron)                 |
-| myelinated                  | Some portion is myelinated                                        |
-| not_neuronal                | Not a neuron                                                      |
-| neuromast                   | Marks the position of a neuromast                                 |
-| neuromast_afferent          | A lateral line afferent that innervates a neuromast               |
-| nucMLF                      | Member of the nucleus of the medial longitudinal fasciculus       |
-| peripheral                  | Part of the peripheral nervous system                             |
-| PLLn                        | Travels through a peripheral lateral line nerve (PLLn)            |
-| putative_spinal_projection  | May project to the spinal cord                                    |
-| right                       | Soma (or majority if no soma) is on the right side                |
-| saccule                     | Marks a saccule                                                   |
-| sensory                     | Directly innervates a sensory organ                               |
-| unmyelinated                | No known portion is myelinated                                    |
-| unknown                     | Name or class of neuron is unknown or not yet labeled             |
-| utricle                     | Marks a utricle                                                   |
+| Annotation                  | Description                                                        |
+|----------------------------:|:-------------------------------------------------------------------|
+| anterior_crista             | Innervates the inner ear anterior crista                           |
+| anterior_macula             | Innervates the inner ear anterior macula (utricle)                 |
+| blacklist                   | Marks for exclusion from any analysis, rendering, or statistics    |
+| bundle                      | Rough reconstruction of a nerve bundle/tract                       |
+| ear                         | Related to the ear                                                 |
+| damaged                     | Reconstruction incomplete or inaccurate due to tissue damage       |
+| lateral_line                | Member of the lateral line system                                  |
+| left                        | Soma (or majority if no soma) is on the left side                  |
+| marker                      | Marks a specific (typically non-neuronal) structure                |
+| medial_crista               | Innervates the inner ear medial crista                             |
+| motor                       | Directly innervates a muscle                                       |
+| myelinated                  | Some portion of neuron or fragment is myelinated                   |
+| heart                       | Related to the heart                                               |
+| not_neuronal                | Not a neuron                                                       |
+| neuromast                   | Marks a neuromast                                                  |
+| neuromast_afferent          | Innervates a neuromast                                             |
+| nucMLF                      | Member of the nucleus of the medial longitudinal fasciculus        |
+| oculomotor                  | Member of the oculomotor nucleus                                   |
+| optic_nerve                 | Member of the optic nerve                                          |
+| peripheral                  | Member of the peripheral nervous system                            |
+| PLLn                        | Travels through the posterior lateral line nerve (PLLn)            |
+| posterior_crista            | Innervates the inner ear posterior crista                          |
+| posterior_macula            | Innervates the inner ear posterior macula (saccule)                |
+| putative                    | Class or identity designation is putative                          |
+| render                      | Marks for inclusion in reconstruction renderings                   |
+| render_blacklist            | Marks for exclusion from reconstruction renderings                 |
+| reticulospinal              | Member of the reticulospinal system                                |
+| right                       | Soma (or majority if no soma) is on the right side                 |
+| saccule                     | Marks a saccule                                                    |
+| sensory                     | Directly innervates a sensory organ                                |
+| spinal_backfill             | Typically labeled by spinal backfill experiments                   |
+| spinal_projection           | Sends axon to the spinal cord                                      |
+| stats                       | Marks for inclusion in reconstruction statistics                   |
+| stats_blacklist             | Marks for exclusion from reconstruction statistics                 |
+| symmetry                    | Marks for inclusion in symmetry analysis                           |
+| symmetry_blacklist          | Marks for exclusion from symmetry analysis                         |
+| tract                       | Rough reconstruction of a nerve bundle/tract                       |
+| unmyelinated                | No known portion is myelinated                                     |
+| unknown                     | Class or identity of neuron is unknown or not yet labeled          |
+| utricle                     | Marks a utricle                                                    |
+| ventral_root                | Member of a vental root nerve                                      |
+| vestibulospinal             | Member of the vestibulospinal system                               |
+| volume                      | Marks a reconstruction used to create a volume                     |
+
+Annotations also exist for identified neurons or classes:
+
+| Annotation                  | Description                                                        |
+|----------------------------:|:-------------------------------------------------------------------|
+| CaD                         | CaD neuron                                                         |
+| CaP                         | (Ca)udal (P)rimary motor neuron class                              |
+| CaV                         | CaV neuron class                                                   |
+| Mauthner                    | Mauthner neuron                                                    |
+| MeL                         | MeL neuron class of nucMLF                                         |
+| MeLc                        | MeLc neuron                                                        |
+| MeLm                        | MeLm neuron                                                        |
+| MeLr                        | MeLr neuron                                                        |
+| MeM                         | MeM neuron class of nucMLF                                         |
+| MeMd                        | dorsal MeM neuron                                                  |
+| MeMv                        | ventral MeM neuron                                                 |
+| MiD                         | MiD2 or MiD3 neuron class                                          |
+| MiD2                        | MiD2cm, MiD2cl, or MiD2i neuron                                    |
+| MiD2cm                      | MiD2cm neuron                                                      |
+| MiD2cl                      | MiD2cl neuron                                                      |
+| MiD2i                       | MiD2i neuron                                                       |
+| MiD3                        | MiD3cm, MiD3cl, or MiD3i neuron                                    |
+| MiD3cm                      | MiD3cm neuron                                                      |
+| MiD3cl                      | MiD3cl neuron                                                      |
+| MiD3i                       | MiD3i neuron                                                       |
+| MiM1                        | MiM1 neuron class                                                  |
+| MiR                         | MiR1 or MiR2 neuron                                                |
+| MiR1                        | MiR1 neuron                                                        |
+| MiR2                        | MiR2 neuron                                                        |
+| MiT                         | MiT neuron class                                                   |
+| MiV                         | MiV1 or MiV2 neuron class                                          |
+| MiV1                        | MiV1 neuron class                                                  |
+| RoI2                        | RoI2C neuron class or RoI2R neuron                                 |
+| RoI2C                       | RoI2C neuron class                                                 |
+| RoI2R                       | RoI2R neuron                                                       |
+| RoL                         | RoL1, RoL2, or RoL3 neuron class                                   |
+| RoL1                        | RoL1 neuron class                                                  |
+| RoL2                        | RoL2 neuron class                                                  |
+| RoL3                        | RoL3 neuron                                                        |
+| RoM                         | RoM1, RoM2, or RoM3 neuron class                                   |
+| RoM1                        | RoM1C or RoM1R neuron                                              |
+| RoM1C                       | RoM1C neuron                                                       |
+| RoM1R                       | RoM1R neuron                                                       |
+| RoM2                        | RoM2L or RoM2M neuron                                              |
+| RoM2L                       | RoM2L neuron                                                       |
+| RoM2M                       | RoM2M neuron                                                       |
+| RoM3                        | RoM3L neuron or RoM3M neuron class                                 |
+| RoM3L                       | RoM3L neuron                                                       |
+| RoM3M                       | RoM3M neuron class                                                 |
+| RoV3                        | RoV3 neuron class                                                  |
 
 
 ##### **Viewing reconstructions in 3D**
@@ -227,7 +302,7 @@ Click the *layer controls button* in the bottom right corner of the main pane to
 
 ![alt text][LCb]
 
-Layer controls allow you to remove a particular image stack or resolution from view, change layer opacity, or alter display settings:
+Layer controls allow you to remove a particular image stack or resolution from view, change layer opacity, alter display settings, select a blend more, or add filters:
 
 ![alt text][LC]
 
