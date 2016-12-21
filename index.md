@@ -8,15 +8,15 @@ Hildebrand16 Guide
 
 ### **Introduction**
 
-The goal of this guide is to familiarize users with the Hildebrand16 electron micrograph (EM) dataset and the tools used to serve it. The dataset is a collection of serial-section electron microscopy image volumes acquired at different resolutions that collectively encompass the anterior quarter of one 5.5 days post-fertilization larval zebrafish.
+The goal of this guide is to familiarize users with the Hildebrand16 electron microscopy (EM) image database and the tools used to serve it. The database consists of a collection of serial-section EM (ssEM) image volumes acquired at different resolutions that collectively encompass the anterior quarter of one 5.5 days post-fertilization larval zebrafish.
 
-We generated this dataset to study the anatomy of the larval zebrafish brain--which is included in its entirety--and peripheral nervous system. Toward this goal, we reconstructed and annotated some features of the nervous system, namely myelinated neuronal processes, which are also available for browsing or analysis. Many non-neuronal tissues are captured in the dataset.
+We generated the datasets that form this database to study the anatomy of the larval zebrafish brain--which is included in its entirety--and peripheral nervous system. Toward this goal, we reconstructed and annotated some features of the nervous system, namely myelinated neuronal processes, which are also available for browsing or analysis. Many non-neuronal tissues are captured in the database.
 
 ----------
 
 ### **Software**
 
-All electron micrographs and reconstructions are hosted using the [Collaborative Annotation Toolkit for Massive Amounts of Image Data (CATMAID)](http://catmaid.org/). CATMAID is designed to aid in the annotation and sharing of image datasets. This guide serves as an initial reference to help users navigate the CATMAID instance we use to host the dataset. For a more thorough understanding of the software and its functionality, please visit the [CATMAID documentation page](http://catmaid.readthedocs.org/).
+All electron micrographs and reconstructions are hosted using the [Collaborative Annotation Toolkit for Massive Amounts of Image Data (CATMAID)](http://catmaid.org/). CATMAID is designed to aid in the annotation and sharing of image datasets. This guide serves as an initial reference to help users navigate the CATMAID instance we use to host the database. For a more thorough understanding of the software and its functionality, please visit the [CATMAID documentation page](http://catmaid.readthedocs.org/).
 Note that using the Google Chrome browser for interacting with CATMAID is highly recommended.
 
 ----------
@@ -294,11 +294,12 @@ With this setting, the 3D viewer will update a green sphere to the location of t
 [V3Dans]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_activenodeset.png "3D view pane active node setting"
 [V3Dani]: http://docs.neurodata.io/hildebrand16/images/guide/View_3D_activenodeinteractive.png "3D view pane active node interactivity"
 
+
 ##### **Different resolutions**
 
 The database includes overlapping image stacks acquired at different resolutions. For a given section (z-index), images acquired at different resolutions are treated as layers. The higher resolution images are placed on top of--and obscuring the view of--the lower resolution images.
 
-Click the *layer controls button* in the bottom right corner of the main pane to access options associated with each image stack layer:
+Click the *layer controls button* in the bottom left corner of the main pane to access options associated with each image stack layer:
 
 ![alt text][LCb]
 
@@ -308,6 +309,54 @@ Layer controls allow you to remove a particular image stack or resolution from v
 
 [LCb]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_button.png "Layer controls button"
 [LC]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls.png "Layer controls"
+
+
+##### **Overlay reference atlases**
+
+Two functional reference atlases--the Z-Brain atlas and the Zebrafish Brain Browser--were transformed into the database. Each stack from these atlases consists of a light microscopy image volume acquired from fluorescence associated with different gene expression profiles or labeling procedure. To overlay an atlas label onto the EM data, first highlight a selected stack using the *Stacks* menu:
+
+![alt text][Ms]
+
+Then add the highlighted stack to the focused viewer:
+
+![alt text][Msa]
+
+Initially, the added stack with obscure the view of the EM data:
+
+![alt text][VZB]
+
+Next, click the *layer controls button* in the bottom left corner of the main pane:
+
+![alt text][LCb]
+
+Scroll down to the stack that was just added (usually the bottom of the layer controls) and change its *blend mode* to 'screen':
+
+![alt text][LCbs]
+
+Then, select the 'color transform' option from the *filter* menu:
+
+![alt text][LCfcs]
+
+Add the new *filter*:
+
+![alt text][LCfcsa]
+
+Change the settings associated with the *color transform* as desired (in this case, for a red overlay):
+
+![alt text][LCfcr]
+
+Finally, close the layer controls and view the resulting atlas overlay:
+
+![alt text][VZBs]
+
+[Ms]: http://docs.neurodata.io/hildebrand16/images/guide/Menu_stacks.png "Stacks menu"
+[Msa]: http://docs.neurodata.io/hildebrand16/images/guide/Menu_stacks_selectadd.png "Stacks menu add to focused viewer"
+[VZB]: http://docs.neurodata.io/hildebrand16/images/guide/View_ZBstackoverlay.png "Initial view of atlas overlay"
+[LCbs]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_blendset.png "Layer blend mode"
+[LCfcs]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_filtercolorset.png "Layer color transform"
+[LCfcsa]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_filtercolorsetadd.png "Layer color transform add"
+[LCfcr]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_filtercolorred.png "Layer color transform red"
+[VZBs]: http://docs.neurodata.io/hildebrand16/images/guide/View_ZBstackoverlayscreen.png "Final view of atlas overlay"
 
 
 ----------
