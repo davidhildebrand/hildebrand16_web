@@ -26,7 +26,7 @@ Note that using the Google Chrome browser for interacting with CATMAID is highly
 
 #### **Accessing**
 
-Clicking on either the "[View data](hthttp://hildebrand16.neurodata.io/catmaid/?pid=6&zp=537540&yp=351910&xp=303051&tool=navigator&sg=2&sgs=4)” " the "[View data with reconstructions](http://hildebrand16.neurodata.io/catmaid/?pid=6&zp=537540&yp=351910.65&xp=303051.45&tool=tracingtool&sg=2&sgs=4)" link on the main page will immediately transport you into CATMAID.
+Clicking on either the "[View data](hthttp://hildebrand16.neurodata.io/catmaid/?pid=6&zp=537540&yp=351910&xp=303051&tool=navigator&sg=2&sgs=4)" the "[View data with reconstructions](http://hildebrand16.neurodata.io/catmaid/?pid=6&zp=537540&yp=351910.65&xp=303051.45&tool=tracingtool&sg=2&sgs=4)" link on the main page will immediately transport you into CATMAID.
 The colored dots visible in the "View data with reconstructions" option are positions where a reconstructed object such as a myelinated neuron intersects with the current transverse section.
 
 | View data        | View data and reconstructions |
