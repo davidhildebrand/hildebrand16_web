@@ -363,7 +363,7 @@ Finally, close the layer controls and view the resulting atlas overlay:
 
 ### **Application programming interface (API) access**
 
-In addition to interacting with the data through the CATMAID user interface, it is also possible to use the [CATMAID API](http://catmaid.readthedocs.io/en/stable/api.html) to interact with the database programmatically. Access to the API is available as AnonymousUser with an API token such that the request header includes "'X-Authorization' : Token 05e73cb0b0987fbf97070520b4570cb1624697f8" header.
+In addition to interacting with the data through the CATMAID user interface, it is also possible to use the [CATMAID API](http://catmaid.readthedocs.io/en/stable/api.html) to interact with the database programmatically. Access to the API is available as AnonymousUser with an API token such that the request header includes { 'X-Authorization' : Token 05e73cb0b0987fbf97070520b4570cb1624697f8 }.
 
 For example, this python script outputs a list of all skeletons, the corresponding neuron name, and all associated annotations: 
 ```
