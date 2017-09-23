@@ -96,6 +96,7 @@ Colored dots will appear on top of the EM data:
 ![alt text][Vdar]
 
 Each dot is a single node indicating where the current section intersects with a directed [polyline](https://en.wikipedia.org/wiki/Polyline) (or treeline) annotation used to represent the morphology of a particular neuron.
+A polyline representation of a neuron is commonly referred to as a skeleton.
 Clicking the *spacebar key* toggles between viewing reconstructions as overlays on the data and a data-only view.
 Any given node (and, thus, neuron) can be selected by hovering over it with the mouse cursor and pressing the *'g' key*.
 
@@ -358,6 +359,75 @@ Finally, close the layer controls and view the resulting atlas overlay:
 [LCfcr]: http://docs.neurodata.io/hildebrand16/images/guide/Layer_controls_filtercolorred.png "Layer color transform red"
 [VZBs]: http://docs.neurodata.io/hildebrand16/images/guide/View_ZBstackoverlayscreen.png "Final view of atlas overlay"
 
+----------
+
+### **Application programming interface (API) access**
+
+In addition to interacting with the data through the CATMAID user interface, it is also possible to use the [CATMAID API](http://catmaid.readthedocs.io/en/stable/api.html) to interact with the database programmatically. Access to the API is available as AnonymousUser with an API token such that the request header includes "'X-Authorization' : Token 05e73cb0b0987fbf97070520b4570cb1624697f8" header.
+
+For example, this python script outputs a list of all skeletons, the corresponding neuron name, and all associated annotations: 
+```
+import requests
+from requests.auth import AuthBase as auth_base
+
+class catmaid_API_token_auth(auth_base):
+    """Attaches HTTP X-Authorization Token headers to the given Request."""
+    def __init__(self, token):
+        self.token = token
+
+    def __call__(self, r):
+        r.headers['X-Authorization'] = 'Token {}'.format(self.token)
+        return r
+
+# Settings
+uri = 'http://hildebrand16.neurodata.io/catmaid'
+token = '05e73cb0b0987fbf97070520b4570cb1624697f8'
+project_name = '130201zf142_160515SWiFT_160701remap'
+
+# Look up project_id from project_name
+project_response = requests.get(
+        uri + '/projects/',
+        auth = catmaid_API_token_auth(token))
+project_query_data = project_response.json()
+project_id = [ project_query_data[i]['id'] for i in range(len(project_query_data))
+    if project_query_data[i]['title'] == project_name ]
+if project_id != []:
+    project_id = project_id[0]
+else:
+    print 'Error: Project ' + project_name + ' does not exist.'
+
+# Identify skeletons in this project
+skeleton_response = requests.get(
+        uri + '/{}/skeletons/'.format(project_id),
+        auth = catmaid_API_token_auth(token))
+skeleton_ids = skeleton_response.json()
+
+# Collect lists of annotations corresponding to all skeletons
+annotation_response = requests.post(
+    uri + '/{}/annotations/forskeletons'.format(project_id),
+    auth = catmaid_API_token_auth(token),
+    data = {'skeleton_ids': skeleton_ids}).json()
+annotation_index = annotation_response['annotations']
+skeleton_annotation_index = annotation_response['skeletons']
+
+# Find neuron names from skeleton identifiers
+name_query_data = {}
+for n, skeleton_id in enumerate(skeleton_ids):
+    name_query_data['skids[{}]'.format(n)] = skeleton_id
+neuron_names = requests.post(
+    uri + '/{}/skeleton/neuronnames'.format(project_id),
+    auth = catmaid_API_token_auth(token),
+    data = name_query_data).json()
+
+# Output
+for skeleton_id, annotation_list in skeleton_annotation_index.items():
+    neuron_name = neuron_names[skeleton_id]
+    annotation_names = [ annotation_index[str(annotation_list[i]['id'])] for i in range(len(annotation_list)) ] 
+    print('skeleton_id: {}; neuron_name: {}; annotations: {}'.format(
+        skeleton_id, neuron_name, ', '.join(annotation_names)))
+```
+
+For a more thorough description of the functions available through the CATMAID API, please see the [CATMAID API documentation](http://catmaid.readthedocs.io/en/stable/api.html).
 
 ----------
 
@@ -366,5 +436,6 @@ Finally, close the layer controls and view the resulting atlas overlay:
 Pressing the *'F1' key* will bring up a CATMAID help window pane that reveals commands available with any given tool. Note that some CATMAID tools will not function properly without additional access. For example, annotating additional features is not currently publicly available. However, we are happy to provide access for those who wish to create additional annotations.
 
 ----------
-Last updated on 2016-07-23 by David Hildebrand
+
+Last updated on 2017-09-23 by David Hildebrand
 <!--se_discussion_list:{"h41SbNlsqb3mtPdQeOIdtotf":{"selectionStart":14629,"type":"conflict","selectionEnd":14639,"discussionIndex":"h41SbNlsqb3mtPdQeOIdtotf"}}-->
