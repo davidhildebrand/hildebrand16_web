@@ -248,7 +248,7 @@ Annotations also exist for identified neurons or classes:
 ##### **Viewing reconstructions in 3D**
 
 Visualizing the morphology of a reconstructed neuron benefits from 3D renderings. CATMAID includes a 3D viewer for this purpose.
-To begin the process of rendering in 3D, click on the *3D view button*:
+To begin the process of rendering in 3D, click on the *3D view* button:
 
 ![alt text][Tb3D]
 
@@ -274,7 +274,7 @@ For example, it can be helpful to change the color associated with different neu
 
 ![alt text][STc]
 
-It is also possible to search for a particular neuron or class of neurons by name or annotation. Clicking on the *Batch Color* button will label the selected subset in the Selection Table. Alternatively, the desired color can be specified for a single neuron by clicking on its *color* button in the appropriate Selection Table row:
+It is also possible to perform a variety of other functions. For example, one can remove or add the display locations of nodes with meta-information such as tags or tracer confidence values by clicking the 'meta' checkbox in the Selection Table. One can also search for a particular neuron or class of neurons by name or annotation. Clicking on the *Batch Color* button will then label the selected subset in the Selection Table. Alternatively, the desired color can be specified for a single neuron by clicking on its *color* button in the appropriate Selection Table row:
 
 ![alt text][STsc]
 
